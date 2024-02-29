@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.search{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.search img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search .content {
+    color: #fff;
+    text-align: center;
+    position : relative;
+    padding: 0px 13px;
+    z-index: 2;
+}
+.search h1{
+    font-size: 2rem;
+    font-weight:600;
+}
+
+.search p{
+    font-size: 1rem;
+    margin-top: 8px;
+    /* font-weight: 400; */
+}
+
+.search .search-box{
+    height: 55px;
+    margin: 45px 0;
+   position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 20px;
+    top: 45%;
+    cursor: default;
+    font-size: 1.5rem;
+    color: #8D8D8D;
+    transform: translateY(-50%);
+}
+
+input, button, i{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    padding-left: 55px;
+    font-size: 1.2rem;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery .images {
+    gap: 15px;
+    max-width: 95%;
+    margin-top: 20px;
+    columns:  5 340px;
+    list-style: none;
+    /* padding: 10px; */
+}
+.images .card{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px ;
+}
+
+.images .card .details{
+    position:absolute;
+    /* to disappear details bottom = -100px */
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.1s ease;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.images .card:hover .details {
+    bottom: 0;
+}
+ .photographer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.photographer i{
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.details .photographer span{
+    font-size: 1rem;
+}
+
+.card .details button {
+    cursor: pointer;
+    padding: 2px 4px;
+    font-size: 1rem;
+    background: #fff
+}
+
+.images img{
+    width: 100%;
+}
+
+.gallery .load-more {
+    margin: 50px 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 12px 27px;
+    background: rgb(185, 119, 185);
+}
+
+.gallery .load-more.disabled{
+    opacity: 0.6;
+    color:rgb(206, 190, 206);
+    pointer-events: none;
+}
+.wrapper header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .photographer{
+    color: black;
+}
+header .photographer  i{
+    font-size: 1.7rem;
+}
+
+header .photographer span {
+    font-size: 1.2rem;
+}
+.lightbox{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0, 0, 0, 0.65);
+}
+/* dynamic classList using JS */
+.lightbox.show{
+    display: block;
+}
+.lightbox .wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    padding: 20px;
+    max-width: 850px;
+    border-radius: 5px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.buttons i:last-child {
+    margin-left: 10px;
+    background: #6c757d;
+}
+header .buttons i {
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    background: rgb(108, 141, 172);
+    font-size: 1.2rem;
+    display: inline-block
+}
+.preveiw-img {
+    display: flex;
+    margin-top: 25px;
+    justify-content:center;
+}
+
+.wrapper .preveiw-img .img{
+max-height: 65vh;
+max-width: 90vh;
+}
+
+.preveiw-img .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
